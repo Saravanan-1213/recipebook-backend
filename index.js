@@ -16,8 +16,8 @@ app.use("/recipes", recipesRouter);
 
 const PORT = process.env.PORT;
 mongoose.connect(process.env.MONGO_URL, {
-  // useNewUrlParser: true,
-  // useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 console.log("Connected to mongoDB.");
 app.listen(PORT, () => console.log("Server started", PORT));
